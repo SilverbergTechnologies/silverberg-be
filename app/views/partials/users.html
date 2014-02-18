@@ -1,0 +1,19 @@
+<div ng-include="'partials/navbar'"></div>
+       <div class="row">
+           <div class="col-xs-6"><button class="btn" ui-sref="users.create">Create User</button></div>
+       </div>
+<div class="row">
+    <div class="col-xs-6">
+        <table class="table">
+            <thead>
+            <td>Name</td>
+            <td>Email</td>
+            </thead>
+            <tr ng-repeat="user in users">
+                <td><a ui-sref="users.detail({id:user.id})">{{ user.name }}</a></td>
+                <td>{{ user.email }}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-xs-6" ui-view></div>
+</div>

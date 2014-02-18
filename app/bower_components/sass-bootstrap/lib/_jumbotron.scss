@@ -1,0 +1,40 @@
+//
+// mainc
+// --------------------------------------------------
+
+
+.mainc {
+  padding: $mainc-padding;
+  margin-bottom: $mainc-padding;
+  font-size: $mainc-font-size;
+  font-weight: 200;
+  line-height: ($line-height-base * 1.5);
+  color: $mainc-color;
+  background-color: $mainc-bg;
+
+  h1 {
+    line-height: 1;
+    color: $mainc-heading-color;
+  }
+  p {
+    line-height: 1.4;
+  }
+
+  .container & {
+    border-radius: $border-radius-large; // Only round corners at higher resolutions if contained in a container
+  }
+
+  @media screen and (min-width: $screen-sm-min) {
+    padding-top:    ($mainc-padding * 1.6);
+    padding-bottom: ($mainc-padding * 1.6);
+
+    .container & {
+      padding-left:  ($mainc-padding * 2);
+      padding-right: ($mainc-padding * 2);
+    }
+
+    h1 {
+      font-size: ($font-size-base * 4.5);
+    }
+  }
+}
